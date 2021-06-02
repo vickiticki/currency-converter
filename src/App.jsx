@@ -62,7 +62,7 @@ export function App() {
       {/* <p>{rates.rates}</p> */}
       <ul>
         {Object.entries(currencies).map(([rabbit]) => {
-          return <li>{rabbit}</li>
+          return <li key={rabbit}>{rabbit}</li>
         })}
       </ul>
     </div>
