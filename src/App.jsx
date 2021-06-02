@@ -42,6 +42,8 @@ export function App() {
 
   //functions
 
+  function amountAsDollars(euros) {}
+
   return (
     <div>
       <header>
@@ -61,8 +63,12 @@ export function App() {
       {/* List of rates */}
       {/* <p>{rates.rates}</p> */}
       <ul>
-        {Object.entries(currencies).map(([rabbit]) => {
-          return <li key={rabbit}>{rabbit}</li>
+        {Object.entries(currencies).map(([rabbit, rabbitValue]) => {
+          return (
+            <li key={rabbit}>
+              {rabbit}: {(rabbitValue * amount).toFixed(2)}
+            </li>
+          )
         })}
       </ul>
     </div>
