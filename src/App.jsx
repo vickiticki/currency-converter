@@ -58,13 +58,15 @@ export function App() {
         <h1>Currency Converter</h1>
       </header>
       {/* input box */}
-      <label>Amount in USD: </label>
-      <input
-        type="number"
-        id="dollars"
-        value={amount}
-        onChange={(event) => setAmount(event.target.value)}
-      />
+      <div className="entry box">
+        <label>Amount in USD: </label>
+        <input
+          type="number"
+          id="dollars"
+          value={amount}
+          onChange={(event) => setAmount(event.target.value)}
+        />
+      </div>
 
       {/* conversion */}
 
