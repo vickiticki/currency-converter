@@ -42,7 +42,13 @@ export function App() {
 
   //functions
 
-  function amountAsDollars(euros) {}
+  function amountAsDollars() {
+    //I've tried have no idea how to get the usd value as a variable
+
+    // divide amount by USD value
+
+    return 1.220979
+  }
 
   return (
     <div>
@@ -60,13 +66,12 @@ export function App() {
 
       {/* conversion */}
 
-      {/* List of rates */}
-      {/* <p>{rates.rates}</p> */}
       <ul>
         {Object.entries(currencies).map(([rabbit, rabbitValue]) => {
           return (
             <li key={rabbit}>
-              {rabbit}: {(rabbitValue * amount).toFixed(2)}
+              {rabbit}:{' '}
+              {((rabbitValue * amount) / amountAsDollars()).toFixed(2)}
             </li>
           )
         })}
