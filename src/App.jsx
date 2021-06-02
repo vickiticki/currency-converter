@@ -43,11 +43,13 @@ export function App() {
   //functions
 
   function amountAsDollars() {
-    //I've tried have no idea how to get the usd value as a variable
-
+    //get usd value
+    //this returns an array that is [usd, #]
+    const ok = Object.entries(currencies).find(([x, y]) => x === 'USD')
+    console.log(ok[1])
     // divide amount by USD value
 
-    return 1.220979
+    return ok[1]
   }
 
   return (
