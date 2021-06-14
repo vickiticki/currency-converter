@@ -29,7 +29,6 @@ export function App() {
   const [currencies, setCurrencies] = useState([])
   const [amount, setAmount] = useState(1)
 
-  // wtfwtfwtfWTF
   useEffect(async function () {
     const response = await axios.get(
       'http://api.exchangeratesapi.io/v1/latest?access_key=6ade5e554ffd27201ecdba4aba8c6bac'
@@ -71,11 +70,10 @@ export function App() {
       {/* conversion */}
 
       <ul>
-        {Object.entries(currencies).map(([rabbit, rabbitValue]) => {
+        {Object.entries(currencies).map(([money, moneyValue]) => {
           return (
-            <li key={rabbit}>
-              {rabbit}:{' '}
-              {((rabbitValue * amount) / amountAsDollars()).toFixed(2)}
+            <li key={money}>
+              {money}: {((moneyValue * amount) / amountAsDollars()).toFixed(2)}
             </li>
           )
         })}
